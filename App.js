@@ -14,6 +14,10 @@ const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleList = taskTitle => {
+    if (taskTitle.length === 0)
+    {
+      return;
+    }
     setTodoList([...todoList, taskTitle]);
     setModalVisible(false);
   };
